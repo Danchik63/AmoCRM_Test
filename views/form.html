@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/views/formStyle.css">
+    <title>Форма заявки</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Создание сделки</h1>
+        <p class="subtitle">Заполните форму для создания новой сделки</p>
+        
+        <div class="time-badge" id="timeBadge">
+            Время на сайте: <span id="timeCounter">0</span> сек
+        </div>
+
+        <form id="leadForm">
+            <div class="form-group">
+                <label for="name">
+                    Имя <span class="required">*</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Введите ваше имя"
+                    required
+                >
+                <div class="error-message" id="nameError">Пожалуйста, введите имя</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">
+                    Email <span class="required">*</span>
+                </label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="example@mail.com"
+                    required
+                >
+                <div class="error-message" id="emailError">Введите корректный email</div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">
+                    Телефон <span class="required">*</span>
+                </label>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    placeholder="8 (800) 555-35-35"
+                    required
+                >
+                <div class="error-message" id="phoneError">Введите корректный номер телефона</div>
+            </div>
+
+            <div class="form-group">
+                <label for="price">
+                    Ожидаемая цена <span class="required">*</span>
+                </label>
+                <input 
+                    type="number" 
+                    id="price" 
+                    name="price" 
+                    placeholder="10000"
+                    min="0"
+                    step="0.01"
+                    required
+                >
+                <div class="error-message" id="priceError">Введите корректную цену</div>
+            </div>
+
+            <button type="submit" id="submitBtn">Создать сделку</button>
+        </form>
+
+        <div class="success-message" id="successMessage">
+            ✓ Сделка успешно создана!
+        </div>
+    </div>
+    <script src="/views/formScript.js"></script>
+</body>
+</html>
