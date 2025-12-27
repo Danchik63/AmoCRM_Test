@@ -31,11 +31,11 @@
 ## Установка
 1. Клонируйте репозиторий:
    ```bash
-   git clone <URL>
+   git clone https://github.com/Danchik63/AmoCRM_Test.git
    ```
 2. Перейдите в директорию проекта:
    ```bash
-   cd AmoCRMTestTask
+   cd AmoCRM_Test
    ```
 3. Установите зависимости:
    ```bash
